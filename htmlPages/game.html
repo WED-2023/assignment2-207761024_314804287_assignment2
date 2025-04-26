@@ -11,14 +11,15 @@
     </audio>
     <div id="gameContainer">
       <canvas id="gameCanvas"></canvas>
+      <button id="backHomeBtn">Back to Home</button>
+      <button id="newGameBtn">New Game</button>
+      <script>
+        document.getElementById('backHomeBtn').addEventListener('click', function() {
+            window.location.href = '../index.html';
+        });
+      </script>
     </div>
-    <button id="backHomeBtn">Back to Home</button>
-    <button id="newGameBtn">New Game</button>
-    <script>
-      document.getElementById('backHomeBtn').addEventListener('click', function() {
-          window.location.href = '../index.html';
-      });
-    </script>
+
     <audio id="fireSound" src="..\audios/cannon_fire.mp3"></audio>
     <audio id="hitSound" src="..\audios/target_hit.mp3"></audio>
     <audio id="deathSound" src="..\audios/blocker_hit.mp3"></audio>
