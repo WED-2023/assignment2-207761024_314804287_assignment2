@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Configuration - Space Battle</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="../jsPages/config.js"></script>
+</head>
+<video autoplay muted loop id="bg-video">
+  <source src="../videos/space1.webm" type="video/webm">
+</video>
+<body>
+  <header>
+    <h1>Game Configuration</h1>
+  </header>
+
+  <main>
+    <form id="configForm">
+      <label for="shootKey">Select shoot key:</label>
+      <select id="shootKey" required>
+        <option value=" ">Space</option>
+      </select>
+
+      <label for="gameTime">Game time (minutes):</label>
+      <input type="number" id="gameTime" min="0" value="2" required />
+
+      <button type="submit">Start Game</button>
+    </form>
+  </main>
+</body>
+</html>

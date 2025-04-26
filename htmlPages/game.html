@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Space Battle</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <audio id="bgMusic" loop>
+      <source src="../audios/zaguri.mp3" type="audio/mp3">
+    </audio>
+    <div id="gameContainer">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+    <button id="backHomeBtn">Back to Home</button>
+    <button id="newGameBtn">New Game</button>
+    <script>
+      document.getElementById('backHomeBtn').addEventListener('click', function() {
+          window.location.href = '../index.html';
+      });
+    </script>
+    <audio id="fireSound" src="..\audios/cannon_fire.mp3"></audio>
+    <audio id="hitSound" src="..\audios/target_hit.mp3"></audio>
+    <audio id="deathSound" src="..\audios/blocker_hit.mp3"></audio>
+    <script src="..\jsPages\game.js"></script>
+  </body>
+</html>

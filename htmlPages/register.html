@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Space Battle</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="../jsPages/users.js"></script>
+</head>
+
+<body>
+
+  <main>
+    <video autoplay muted loop id="bg-video">
+      <source src="../videos/space1.webm" type="video/webm">
+    </video>
+    <form id="registerForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+      <input type="text" id="firstName" placeholder="First Name" required />
+      <input type="text" id="lastName" placeholder="Last Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      
+      <label>Date of Birth:</label>
+      <div class="dob-selects">
+        <select id="day" required></select>
+        <select id="month" required></select>
+        <select id="year" required></select>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+    <p id="registerMessage"></p>
+    <!-- <div class="navigation-links">
+        <button onclick="window.location.href='../index.html'">Back to Welcome Page</button>
+        <button onclick="window.location.href='login.html'">Go to Login</button>
+    </div>       -->
+  </main>
+</body>
+</html>

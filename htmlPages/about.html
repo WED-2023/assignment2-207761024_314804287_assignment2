@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About - Space Battle</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="../jsPages/about.js"></script>
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="../videos/space1.webm" type="video/webm">
+  </video>
+
+  <button id="openAboutBtn">About</button>
+
+  <div id="aboutModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModalBtn">&times;</span>
+      <h2>About This Game</h2>
+      <p><strong>Submitted by:</strong> Noam Tarshish & Shay Harush</p>
+      <p><strong>Template / Plugin used:</strong> No</p>
+      <p><strong>Challenges we faced:</strong></p>
+      <ul>
+        <li>Synchronizing background music with screen transitions</li>
+        <li>Dynamic enemy speed and behavior</li>
+        <li>Custom shooting types</li>
+        <li>Designing interactive backgrounds</li>
+      </ul>
+      <p><strong>Implemented Features:</strong></p>
+      <ul>
+        <li>Clear and visual game instructions</li>
+        <li>Time-based game end (timer countdown)</li>
+        <li>Alternate shooting modes</li>
+        <li>Dynamic scoring system and high score saving</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

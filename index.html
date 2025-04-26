@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Space Battle</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="videos/space1.webm" type="video/webm">
+  </video>
+
+  <header>
+    <img src="images/logo.png" alt="Game Logo" class="logo" />
+    <h1>Are You Ready To Protect Building 96? 🚀</h1>
+    <p>By: Noam Tarshish & Shay Harush | IDs: 207761024 & 314804287</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" data-screen="home">Welcome</a></li>
+      <li><a href="#" data-screen="register">Register</a></li>
+      <li><a href="#" data-screen="login">Login</a></li>
+      <li><a href="#" data-screen="about">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="home" class="screen active">
+      <h2>Welcome to Space Battle!</h2>
+      <p>Prepare to defend Building 96!</p>
+    </div>
+
+    <div id="register" class="screen">
+      <iframe src="htmlPages/register.html" width="100%" height="1000px" style="border: none;"></iframe>
+    </div>
+
+    <div id="login" class="screen">
+      <iframe src="htmlPages/login.html" width="100%" height="1000px" style="border: none;"></iframe>
+    </div>
+
+    <div id="about" class="screen">
+      <iframe src="htmlPages/about.html" width="100%" height="1000px" style="border: none;"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>2025 © Web Development Course | Contact: Noamtars@post.bgu.ac.il & Shayhar@post.bgu.ac.il </p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll("nav a");
+      const screens = document.querySelectorAll(".screen");
+
+      links.forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = link.getAttribute("data-screen");
+
+          screens.forEach(screen => {
+            screen.style.display = (screen.id === target) ? "block" : "none";
+          });
+        });
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      showScreen('home');
+    });
+  </script>
+</body>
+</html>
+
