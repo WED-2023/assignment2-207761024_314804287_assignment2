@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 function resizeCanvas() {
   // Set canvas dimensions to match window size
   canvas.width = window.innerWidth * 1;
-  canvas.height = window.innerHeight * 0.42;
+  canvas.height = window.innerHeight * 0.40;
   
   startX = Math.random() * (canvas.width - ship.width) + ship.width / 2;
   startY = canvas.height - ship.height - 20;
