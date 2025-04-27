@@ -1,11 +1,10 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-// Add this function:
 function resizeCanvas() {
   // Set canvas dimensions to match window size
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth * 1;
+  canvas.height = window.innerHeight * 0.42;
   
   startX = Math.random() * (canvas.width - ship.width) + ship.width / 2;
   startY = canvas.height - ship.height - 20;
@@ -64,8 +63,8 @@ const enemyImages = [
 const ship = {
   x: startX,
   y: startY,
-  width: 80,
-  height: 120,
+  width: 60,
+  height: 90,
   speed: 5,
   color: config.playerColor,
   lives: 3
@@ -81,8 +80,8 @@ document.addEventListener("keyup", e => delete keys[e.key]);
 // Enemies init
 const enemyRows = 4;
 const enemyCols = 5;
-const spacingX = 110;
-const spacingY = 80;
+const spacingX = 60;
+const spacingY = 50;
 const offsetX = 90;
 const offsetY = 50;
 
@@ -213,86 +212,6 @@ function update() {
 
 }
 
-// function draw() {
-//   // Background
-//   ctx.fillStyle = "#0f172a"; // Dark navy background
-//   ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-//   // Player
-//   ctx.drawImage(playerImage, ship.x - ship.width / 2, ship.y, ship.width, ship.height);
-
-//   // Bullets
-//   ctx.fillStyle = "magenta";
-//   bullets.forEach(b => {
-//     ctx.beginPath();
-//     ctx.arc(b.x, b.y, 4, 0, 2 * Math.PI);
-//     ctx.fill();
-//   });
-
-//   // Enemies
-//   // ctx.fillStyle = config.enemyColor;
-//   // enemies.forEach(e => {
-//   //   ctx.beginPath();
-//   //   ctx.arc(e.x, e.y, e.radius, 0, 2 * Math.PI);
-//   //   ctx.fill();
-//   // });
-//   enemies.forEach(e => {
-//     ctx.drawImage(e.image, e.x - 20, e.y - 20, 40, 40); 
-//   });
-  
-
-//   // Draw enemy bullets
-//   if (!gameOver && enemyBullet && enemyBullet.color) {
-//     ctx.fillStyle = enemyBullet.color;
-//     ctx.beginPath();
-//     ctx.arc(enemyBullet.x, enemyBullet.y, 5, 0, 2 * Math.PI);
-//     ctx.fill();
-//   }
-
-
-//   // Score
-//   ctx.fillStyle = "white";
-//   ctx.font = "20px Orbitron, sans-serif";
-//   ctx.fillText("Score: " + score, 10, 20);
-//   ctx.fillText("Lives: " + ship.lives, 10, 40);
-
-//   if (gameOver) {
-//     ctx.font = "40px Arial";
-//     ctx.fillStyle = "white";
-  
-//     let message = "";
-  
-//     if (gameEndReason === "victory") {
-//       message = "Champion!";
-//     } else if (gameEndReason === "lost") {
-//       message = "You Lost!";
-//     } else if (gameEndReason === "time") {
-//       message = score >= 100 ? "Winner!" : "You can do better";
-//     }
-  
-//     ctx.fillText(message, canvas.width / 2 - ctx.measureText(message).width / 2, canvas.height / 2);
-//     const username = localStorage.getItem("currentUser");
-//     if (username) {
-//       const key = `scores_${username}`;
-//       let scores = JSON.parse(localStorage.getItem(key)) || [];
-
-//       ctx.font = "20px Orbitron, sans-serif";
-//       ctx.fillStyle = "white";
-//       ctx.fillText("Score History:", 10, canvas.height / 2 + 40);
-
-//       scores.slice(0, 5).forEach((s, index) => {
-//         ctx.fillText(`${index + 1}. ${s}`, 30, canvas.height / 2 + 70 + index * 25);
-//       });
-//     }
-
-//   }
-  
-
-//   // Timer
-//   const timeLeft = config.gameTime * 60 - elapsedSeconds;
-//   ctx.fillText("Time Left: " + formatTime(Math.max(0, timeLeft)), 10, 60);
-
-// }
 
 function draw() {
   // === Background ===
@@ -314,7 +233,7 @@ function draw() {
 
   // === Enemies ===
   enemies.forEach(e => {
-    ctx.drawImage(e.image, e.x - 20, e.y - 20, 90, 60);
+    ctx.drawImage(e.image, e.x - 20, e.y - 20, 60, 40);
   });
 
   // === Enemy Bullet ===

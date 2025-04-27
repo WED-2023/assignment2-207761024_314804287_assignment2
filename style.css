@@ -1,6 +1,17 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
 #gameContainer {
-  width: 70%;
-  height: calc(70vh - 70px);;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,22 +21,13 @@
 }
 
 #gameCanvas {
-  width: 90%;
-  height: 90%;
+  width: 100vw;
+  height: 100vh;
   display: block;
-}
-
-
-
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #ffffff;
-  text-align: center;
+  background-color: black; 
+  border: 2px solid #38bdf8; 
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
 }
 
 

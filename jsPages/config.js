@@ -30,16 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const bgAudio = new Audio("../audios/zaguri.mp3");
     bgAudio.loop = true;
     bgAudio.volume = 0.5;
-    // bgAudio.play().then(() => {
-    //   window.location.href = "game.html";
-    // }).catch(() => {
-    //   window.location.href = "game.html";
-    // });
     bgAudio.play().then(() => {
-      window.open("../htmlPages/game.html", "_blank");
+      window.location.href = "game.html";
     }).catch(() => {
-      window.open("../htmlPages/game.html", "_blank");
-    });    
+      window.location.href = "game.html";
+    });
+    // bgAudio.play().then(() => {
+    //   window.open("../htmlPages/game.html", "_blank");
+    // }).catch(() => {
+    //   window.open("../htmlPages/game.html", "_blank");
+    // });    
   });
 });
 
