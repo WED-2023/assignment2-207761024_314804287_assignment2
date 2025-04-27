@@ -88,7 +88,7 @@ const offsetY = 50;
 const rowScores = [20, 15, 10, 5];
 
 for (let r = 0; r < enemyRows; r++) {
-  const enemyImage = enemyImages[r % enemyImages.length]; // כל שורה סוג שונה
+  const enemyImage = enemyImages[r % enemyImages.length]; 
   for (let c = 0; c < enemyCols; c++) {
     enemies.push({
       x: offsetX + c * spacingX,
@@ -374,12 +374,6 @@ document.getElementById("newGameBtn").addEventListener("click", () => {
   manualRestart = true;
   window.location.href = "game.html";
 });
-
-// document.getElementById("backHomeBtn").addEventListener("click", () => {
-//   window.location.href = "../index.html"; // חזרה לעמוד הבית
-// });
-
-
 
 
 loop();

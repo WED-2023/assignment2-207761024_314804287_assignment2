@@ -133,23 +133,6 @@ input, select, button {
   background-color: #0ea5e9;
 }
 
-/* #newGameBtn {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  padding: 14px 28px;
-  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-  border: none;
-  border-radius: 14px;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #0f172a;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
-  transition: all 0.3s ease;
-  z-index: 100;
-} */
-
 
 #newGameBtn {
   position: fixed;
@@ -168,22 +151,6 @@ input, select, button {
   cursor: pointer;
 }
 
-/* #backHomeBtn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: #38bdf8;
-  color: #0f172a;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-size: 1em;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 100;
-} */
 #backHomeBtn {
   position: fixed;
   bottom: 10px;
@@ -312,27 +279,4 @@ nav a:hover {
   height: 60px;
   margin-bottom: 10px;
 }
-
-
-
-/* #gameCanvas {
-  width: 90%;
-  height: 90%;
-  display: block;
-  background-color: black;
-} */
-
-/* #gameCanvas {
-  width: 1920px; 
-  height: 1080px; 
-  display: block;
-  margin: 0 auto;
-  background-color: black;
-  border: 4px solid #38bdf8;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
-} */
-
-
-
 

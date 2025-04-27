@@ -35,11 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }).catch(() => {
       window.location.href = "game.html";
     });
-    // bgAudio.play().then(() => {
-    //   window.open("../htmlPages/game.html", "_blank");
-    // }).catch(() => {
-    //   window.open("../htmlPages/game.html", "_blank");
-    // });    
   });
 });
 
